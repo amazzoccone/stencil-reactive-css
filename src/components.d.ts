@@ -10,9 +10,14 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AppExampleOne {}
+  interface AppExampleThree {}
   interface AppExampleTwo {}
   interface AppHome {}
   interface AppRoot {}
+  interface CtInput {
+    'color': string;
+    'value': string;
+  }
 }
 
 declare global {
@@ -22,6 +27,12 @@ declare global {
   var HTMLAppExampleOneElement: {
     prototype: HTMLAppExampleOneElement;
     new (): HTMLAppExampleOneElement;
+  };
+
+  interface HTMLAppExampleThreeElement extends Components.AppExampleThree, HTMLStencilElement {}
+  var HTMLAppExampleThreeElement: {
+    prototype: HTMLAppExampleThreeElement;
+    new (): HTMLAppExampleThreeElement;
   };
 
   interface HTMLAppExampleTwoElement extends Components.AppExampleTwo, HTMLStencilElement {}
@@ -41,25 +52,40 @@ declare global {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
   };
+
+  interface HTMLCtInputElement extends Components.CtInput, HTMLStencilElement {}
+  var HTMLCtInputElement: {
+    prototype: HTMLCtInputElement;
+    new (): HTMLCtInputElement;
+  };
   interface HTMLElementTagNameMap {
     'app-example-one': HTMLAppExampleOneElement;
+    'app-example-three': HTMLAppExampleThreeElement;
     'app-example-two': HTMLAppExampleTwoElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
+    'ct-input': HTMLCtInputElement;
   }
 }
 
 declare namespace LocalJSX {
   interface AppExampleOne extends JSXBase.HTMLAttributes<HTMLAppExampleOneElement> {}
+  interface AppExampleThree extends JSXBase.HTMLAttributes<HTMLAppExampleThreeElement> {}
   interface AppExampleTwo extends JSXBase.HTMLAttributes<HTMLAppExampleTwoElement> {}
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
+  interface CtInput extends JSXBase.HTMLAttributes<HTMLCtInputElement> {
+    'color'?: string;
+    'value'?: string;
+  }
 
   interface IntrinsicElements {
     'app-example-one': AppExampleOne;
+    'app-example-three': AppExampleThree;
     'app-example-two': AppExampleTwo;
     'app-home': AppHome;
     'app-root': AppRoot;
+    'ct-input': CtInput;
   }
 }
 

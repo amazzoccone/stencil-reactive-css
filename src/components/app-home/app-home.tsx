@@ -27,6 +27,12 @@ export class AppHome {
             Example 2
           </button>
         </stencil-route-link>
+
+        <stencil-route-link url='/example/three'>
+          <button>
+            Example 3
+          </button>
+        </stencil-route-link>
       </div>
     );
   }

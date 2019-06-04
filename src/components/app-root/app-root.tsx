@@ -20,6 +20,7 @@ export class AppRoot {
               <stencil-route url='/' component='app-home' exact={true} />
               <stencil-route url='/example/one' component='app-example-one' />
               <stencil-route url='/example/two' component='app-example-two' />
+              <stencil-route url='/example/three' component='app-example-three' />
             </stencil-route-switch>
           </stencil-router>
         </main>
