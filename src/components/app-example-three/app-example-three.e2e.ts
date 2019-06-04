@@ -10,7 +10,7 @@ describe('app-example-three', () => {
   });
 
   it('displays the p', async () => {
-    const page = await newE2EPage({ url: '/example/three' });
+    const page = await newE2EPage();
     await page.setContent('<app-example-three></app-example-three>');
 
     const element = await page.find('app-example-three >>> div');

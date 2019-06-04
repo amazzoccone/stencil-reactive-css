@@ -7,6 +7,10 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class AppRoot {
+  isHomeView(): boolean {
+    return location.pathname === '/';
+  }
+
   render() {
     return (
       <div>
@@ -16,6 +20,22 @@ export class AppRoot {
 
         <main>
           <stencil-router>
+            <stencil-route-link url='/'>
+              <button class="btn-home">Home</button>
+            </stencil-route-link>
+
+            <stencil-route-link url='/example/one'>
+              <button>Example 1</button>
+            </stencil-route-link>
+
+            <stencil-route-link url='/example/two'>
+              <button>Example 2</button>
+            </stencil-route-link>
+
+            <stencil-route-link url='/example/three'>
+              <button>Example 3</button>
+            </stencil-route-link>
+
             <stencil-route-switch scrollTopOffset={0}>
               <stencil-route url='/' component='app-home' exact={true} />
               <stencil-route url='/example/one' component='app-example-one' />

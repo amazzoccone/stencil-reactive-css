@@ -15,24 +15,6 @@ export class AppHome {
           You can use it to meet the best of two worlds!
         </p>
         <p>Let's see Web Components and CSS Variables in action!</p>
-
-        <stencil-route-link url='/example/one'>
-          <button>
-            Example 1
-          </button>
-        </stencil-route-link>
-
-        <stencil-route-link url='/example/two'>
-          <button>
-            Example 2
-          </button>
-        </stencil-route-link>
-
-        <stencil-route-link url='/example/three'>
-          <button>
-            Example 3
-          </button>
-        </stencil-route-link>
       </div>
     );
   }
