@@ -6,32 +6,27 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import {
-  MatchResults,
-} from '@stencil/router';
 
 
 export namespace Components {
+  interface AppExampleSimple {}
   interface AppHome {}
-  interface AppProfile {
-    'match': MatchResults;
-  }
   interface AppRoot {}
 }
 
 declare global {
 
 
+  interface HTMLAppExampleSimpleElement extends Components.AppExampleSimple, HTMLStencilElement {}
+  var HTMLAppExampleSimpleElement: {
+    prototype: HTMLAppExampleSimpleElement;
+    new (): HTMLAppExampleSimpleElement;
+  };
+
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
     new (): HTMLAppHomeElement;
-  };
-
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
   };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
@@ -40,22 +35,20 @@ declare global {
     new (): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
+    'app-example-simple': HTMLAppExampleSimpleElement;
     'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface AppExampleSimple extends JSXBase.HTMLAttributes<HTMLAppExampleSimpleElement> {}
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
-  interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
-    'match'?: MatchResults;
-  }
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
 
   interface IntrinsicElements {
+    'app-example-simple': AppExampleSimple;
     'app-home': AppHome;
-    'app-profile': AppProfile;
     'app-root': AppRoot;
   }
 }

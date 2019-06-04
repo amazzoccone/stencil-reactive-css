@@ -11,15 +11,14 @@ export class AppHome {
     return (
       <div class='app-home'>
         <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
+          Welcome to the Stencil Reactive CSS proof-of-concept App.
+          You can use it to meet the best of two worlds!
         </p>
+        <p>Let's see Web Components and CSS Variables in action!</p>
 
-        <stencil-route-link url='/profile/stencil'>
+        <stencil-route-link url='/example/simple'>
           <button>
-            Profile page
+            Example 1
           </button>
         </stencil-route-link>
       </div>
