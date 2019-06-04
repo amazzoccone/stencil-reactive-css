@@ -7,7 +7,6 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class AppRoot {
-
   render() {
     return (
       <div>
