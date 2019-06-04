@@ -16,9 +16,15 @@ export class AppHome {
         </p>
         <p>Let's see Web Components and CSS Variables in action!</p>
 
-        <stencil-route-link url='/example/simple'>
+        <stencil-route-link url='/example/one'>
           <button>
             Example 1
+          </button>
+        </stencil-route-link>
+
+        <stencil-route-link url='/example/two'>
+          <button>
+            Example 2
           </button>
         </stencil-route-link>
       </div>

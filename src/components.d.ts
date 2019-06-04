@@ -9,7 +9,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface AppExampleSimple {}
+  interface AppExampleOne {}
+  interface AppExampleTwo {}
   interface AppHome {}
   interface AppRoot {}
 }
@@ -17,10 +18,16 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLAppExampleSimpleElement extends Components.AppExampleSimple, HTMLStencilElement {}
-  var HTMLAppExampleSimpleElement: {
-    prototype: HTMLAppExampleSimpleElement;
-    new (): HTMLAppExampleSimpleElement;
+  interface HTMLAppExampleOneElement extends Components.AppExampleOne, HTMLStencilElement {}
+  var HTMLAppExampleOneElement: {
+    prototype: HTMLAppExampleOneElement;
+    new (): HTMLAppExampleOneElement;
+  };
+
+  interface HTMLAppExampleTwoElement extends Components.AppExampleTwo, HTMLStencilElement {}
+  var HTMLAppExampleTwoElement: {
+    prototype: HTMLAppExampleTwoElement;
+    new (): HTMLAppExampleTwoElement;
   };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
@@ -35,19 +42,22 @@ declare global {
     new (): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
-    'app-example-simple': HTMLAppExampleSimpleElement;
+    'app-example-one': HTMLAppExampleOneElement;
+    'app-example-two': HTMLAppExampleTwoElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface AppExampleSimple extends JSXBase.HTMLAttributes<HTMLAppExampleSimpleElement> {}
+  interface AppExampleOne extends JSXBase.HTMLAttributes<HTMLAppExampleOneElement> {}
+  interface AppExampleTwo extends JSXBase.HTMLAttributes<HTMLAppExampleTwoElement> {}
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
 
   interface IntrinsicElements {
-    'app-example-simple': AppExampleSimple;
+    'app-example-one': AppExampleOne;
+    'app-example-two': AppExampleTwo;
     'app-home': AppHome;
     'app-root': AppRoot;
   }

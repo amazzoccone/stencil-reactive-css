@@ -1,11 +1,11 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'app-example-simple',
-  styleUrl: 'app-example-simple.css',
+  tag: 'app-example-one',
+  styleUrl: 'app-example-one.css',
   shadow: true
 })
-export class AppExampleSimple {
+export class AppExampleOne {
   constructor() {
     this.onChangeInput = this.onChangeInput.bind(this);
   }
@@ -24,7 +24,7 @@ export class AppExampleSimple {
 
   render() {
     return (
-      <div class="app-profile">
+      <div class="app-example-one">
         <h3>{this.title()}</h3>
         <p>
           Hi! This is the first and most simple example.
