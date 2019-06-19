@@ -1,0 +1,7 @@
+@define-mixin ct-input-rounded {
+  border-radius: 10px;
+}
+
+@define-mixin ct-input-background $color {
+  background-color: $(color);
+}

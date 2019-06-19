@@ -1,3 +1,5 @@
+@import ../ct-input/_mixins.css;
+
 .app-example-three {
   padding: 10px;
   color: var(--example-three-color);
@@ -6,5 +8,11 @@
 :root { --ct-theme-color: #0FF; }
 div { --ct-theme: green; }
 label { --ct-theme: yellow; }
-.ct_input { --ct-theme: red; }
+.ct_input {
+  --ct-theme: red;
+
+  @mixin ct-input-rounded;
+  @mixin ct-input-background #FAFAFA;
+}
+
 * { color: var(--ct-theme); }
