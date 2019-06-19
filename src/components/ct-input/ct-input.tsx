@@ -2,8 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'ct-input',
-  styleUrl: 'ct-input.css',
-  shadow: true
+  styleUrl: 'ct-input.css'
 })
 export class CtInput {
   @Prop() color: string;
@@ -22,7 +21,7 @@ export class CtInput {
 
   render() {
     return (
-      <input type="text" value={this.value} style={this.styles()} />
+      <input class="ct_input" type="text" value={this.value} style={this.styles()} />
     );
   }
 }

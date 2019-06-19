@@ -16,5 +16,7 @@ body {
 
   --primary: #444;
   --example-two-color: #222;
-  --example-three-color: #222;
+  --example-three-color: #444;
+
+  --ct-theme-color: #0FF;
 }
